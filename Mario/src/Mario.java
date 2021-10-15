@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Mario {
 
-  static ArrayList<Pizza> pizzaList = new ArrayList<>();
+  static ArrayList<Pizza> pizzaList = new ArrayList<Pizza>();
 
   static Order orderNr1 = new Order("nr. 1 ");
   static Order orderNr2 = new Order("nr. 2 ");
@@ -11,8 +11,8 @@ public class Mario {
   static Order orderNr4 = new Order("nr. 4 ");
   static Order orderNr5 = new Order("nr. 5 ");
 
-  static ArrayList<Order> fullOrder = new ArrayList<>();
-  static ArrayList<Order> expOrder = new ArrayList<>();
+  static ArrayList<Order> fullOrder = new ArrayList<Order>();
+  static ArrayList<Order> expOrder = new ArrayList<Order>();
 
 
   static Scanner in = new Scanner(System.in);
@@ -29,7 +29,9 @@ public class Mario {
   static Pizza pizza4 = new Pizza("Pizza Hawaii", 4, 64);
   static Pizza pizza5 = new Pizza("Pizza Capone", 5, 64);
 
-
+public String toString(){
+  return " " + fullOrder;
+}
 
   public static void pizzaList(){
     pizzaList.add(pizza1);
@@ -115,11 +117,7 @@ public class Mario {
 
   public static void seeOrderList(){
 
-    System.out.println(orderNr1.toString());
-    System.out.println(orderNr2.toString());
-    System.out.println(orderNr3.toString());
-    System.out.println(orderNr4.toString());
-    System.out.println(orderNr5.toString());
+    System.out.println(fullOrder.toString());
 
   }
 
@@ -161,7 +159,6 @@ public class Mario {
 
       orderNr1.getOrderArrayList().add(pizzaList.get(orderPizzaInput));
       System.out.println(orderNr1.toString());
-
       // Ja / nej til flere items til ordre?
 
       System.out.println("Vil du tilføje mere til ordren?");
@@ -178,6 +175,7 @@ public class Mario {
     }while(yesOrNoInput == false);
 
         fullOrder.add(orderNr1);
+
 
   }
   public static void makeOrder2(){
@@ -290,7 +288,6 @@ public class Mario {
 
       orderNr5.getOrderArrayList().add(pizzaList.get(orderPizzaInput));
       System.out.println(orderNr5.toString());
-
       // Ja / nej til flere items til ordre?
 
       System.out.println("Vil du tilføje mere til ordren");
@@ -310,8 +307,251 @@ public class Mario {
 
   }
 
+  public static void changeOrder(){
 
-  public static void changeOrder(){}
+    String changeOrderInput;
+
+    System.out.println("Hvilken ordre vil du justere i?");
+
+    seeOrderList();
+
+    changeOrderInput = in.nextLine();
+
+    switch (changeOrderInput) {
+
+      case "1":
+        changeOrder1();
+        break;
+
+      case "2":
+        changeOrder2();
+        break;
+
+      case "3":
+        changeOrder3();
+        break;
+
+      case "4":
+        changeOrder4();
+        break;
+
+      case "5":
+        changeOrder5();
+        break;
+
+    }
+  }
+  public static void changeOrder1(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr1);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr1.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr1.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr1.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr1.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr1.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr1.getOrderArrayList().remove(5);
+        break;
+
+    }
+
+    System.out.println(orderNr1);
+
+  }
+  public static void changeOrder2(){
+
+
+    String changeItemInput;
+
+    System.out.println(orderNr2);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr2.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr2.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr2.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr2.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr2.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr2.getOrderArrayList().remove(5);
+        break;
+
+    }
+
+    System.out.println(orderNr2);
+
+  }
+  public static void changeOrder3(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr3);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr3.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr3.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr3.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr3.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr3.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr3.getOrderArrayList().remove(5);
+        break;
+
+    }
+
+    System.out.println(orderNr3);
+
+  }
+  public static void changeOrder4(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr4);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr4.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr4.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr4.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr4.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr4.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr4.getOrderArrayList().remove(5);
+        break;
+
+    }
+
+    System.out.println(orderNr4);
+
+  }
+  public static void changeOrder5(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr5);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr5.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr5.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr5.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr5.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr5.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr5.getOrderArrayList().remove(5);
+        break;
+
+    }
+
+    System.out.println(orderNr5);
+
+  }
 
   public static void removeOrder(){
 
@@ -380,27 +620,27 @@ public class Mario {
 
       case "1":
         expOrder.add(orderNr1);
-        orderNr1.getOrderArrayList().clear();
+        fullOrder.remove(orderNr1);
         break;
 
       case "2":
         expOrder.add(orderNr2);
-        orderNr2.getOrderArrayList().clear();
+        fullOrder.remove(orderNr2);
         break;
 
       case "3":
         expOrder.add(orderNr3);
-        orderNr3.getOrderArrayList().clear();
+        fullOrder.remove(orderNr3);
         break;
 
       case "4":
         expOrder.add(orderNr4);
-        orderNr4.getOrderArrayList().clear();
+        fullOrder.remove(orderNr4);
         break;
 
       case "5":
         expOrder.add(orderNr5);
-        orderNr5.getOrderArrayList().clear();
+        fullOrder.remove(orderNr5);
         break;
 
     }
@@ -420,10 +660,14 @@ public class Mario {
 
     pizzaList();
 
+
+
     String mainInput;
     boolean mainExit = false;
 
     do {
+
+      seeOrderList();
 
       System.out.println("\nHvad vil du vælge i menuen? \n");
       System.out.println("""
@@ -444,6 +688,7 @@ public class Mario {
         break;
 
         case "2":
+          changeOrder();
           break;
 
         case "3":
@@ -462,8 +707,6 @@ public class Mario {
           mainExit = true;
           break;
       }
-
-      seeOrderList();
 
     } while(!mainExit);
 
