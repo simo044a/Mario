@@ -14,6 +14,7 @@ public class Mario {
   static Order orderNr7 = new Order("nr. 7 ");
   static Order orderNr8 = new Order("nr. 8 ");
 
+
   static ArrayList<Order> fullOrder = new ArrayList<Order>();
   static ArrayList<Order> expOrder = new ArrayList<Order>();
 
@@ -902,34 +903,42 @@ public String toString(){
 
         case "1":
           orderNr1.getOrderArrayList().clear();
+          fullOrder.remove(orderNr1);
           break;
 
         case "2":
           orderNr2.getOrderArrayList().clear();
+          fullOrder.remove(orderNr2);
           break;
 
         case "3":
           orderNr3.getOrderArrayList().clear();
+          fullOrder.remove(orderNr3);
           break;
 
         case "4":
           orderNr4.getOrderArrayList().clear();
+          fullOrder.remove(orderNr4);
           break;
 
         case "5":
           orderNr5.getOrderArrayList().clear();
+          fullOrder.remove(orderNr5);
           break;
 
         case "6":
           orderNr6.getOrderArrayList().clear();
+          fullOrder.remove(orderNr6);
           break;
 
         case "7":
           orderNr7.getOrderArrayList().clear();
+          fullOrder.remove(orderNr7);
           break;
 
         case "8":
           orderNr8.getOrderArrayList().clear();
+          fullOrder.remove(orderNr8);
           break;
       }
 
