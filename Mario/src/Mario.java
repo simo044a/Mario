@@ -117,7 +117,7 @@ public String toString(){
 
   public static void seeOrderList(){
 
-    System.out.println(fullOrder.toString());
+    System.out.println("\n" + fullOrder.toString());
 
   }
 
@@ -174,7 +174,7 @@ public String toString(){
 
     }while(yesOrNoInput == false);
 
-        fullOrder.add(orderNr1);
+    if (!fullOrder.contains(orderNr1)) {fullOrder.add(orderNr1);}
 
 
   }
@@ -208,7 +208,7 @@ public String toString(){
 
     }while(yesOrNoInput == false);
 
-    fullOrder.add(orderNr2);
+    if (!fullOrder.contains(orderNr2)) {fullOrder.add(orderNr2);}
 
   }
   public static void makeOrder3(){
@@ -240,7 +240,7 @@ public String toString(){
 
     }while(yesOrNoInput == false);
 
-    fullOrder.add(orderNr3);
+    if (!fullOrder.contains(orderNr3)) {fullOrder.add(orderNr3);}
 
   }
   public static void makeOrder4(){
@@ -272,7 +272,7 @@ public String toString(){
 
     }while(yesOrNoInput == false);
 
-    fullOrder.add(orderNr4);
+    if (!fullOrder.contains(orderNr4)) {fullOrder.add(orderNr4);}
 
   }
   public static void makeOrder5(){
@@ -303,7 +303,7 @@ public String toString(){
 
     }while(yesOrNoInput == false);
 
-    fullOrder.add(orderNr5);
+    if (!fullOrder.contains(orderNr5)) {fullOrder.add(orderNr5);}
 
   }
 
@@ -671,11 +671,11 @@ public String toString(){
 
       System.out.println("\nHvad vil du vælge i menuen? \n");
       System.out.println("""
-          Input 1: Lav en ordre eller tilføj item til ordre.
+          Input 1: Lav en ordre (eller tilføj item til eksisterende ordre).
           Input 2: Fjern item fra en ordre.
-          Input 3: Fjern ordre.
+          Input 3: Fjern ordre fra ordre liste.
           Input 4: Ordre fuldført.
-          Input 5: Se exp liste.
+          Input 5: Se ekspideret ordre liste.
           Input 6: Exit program.
           """);
 
