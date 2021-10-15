@@ -10,6 +10,9 @@ public class Mario {
   static Order orderNr3 = new Order("nr. 3 ");
   static Order orderNr4 = new Order("nr. 4 ");
   static Order orderNr5 = new Order("nr. 5 ");
+  static Order orderNr6 = new Order("nr. 6 ");
+  static Order orderNr7 = new Order("nr. 7 ");
+  static Order orderNr8 = new Order("nr. 8 ");
 
   static ArrayList<Order> fullOrder = new ArrayList<Order>();
   static ArrayList<Order> expOrder = new ArrayList<Order>();
@@ -28,6 +31,12 @@ public class Mario {
   static Pizza pizza3 = new Pizza("Pizza Capricciosa", 3, 59);
   static Pizza pizza4 = new Pizza("Pizza Hawaii", 4, 64);
   static Pizza pizza5 = new Pizza("Pizza Capone", 5, 64);
+  static Pizza pizza6 = new Pizza("Pizza Italiano", 6, 64);
+  static Pizza pizza7 = new Pizza("Pizza Luciano", 7 , 64);
+  static Pizza pizza8 = new Pizza("Pizza Europa",8, 67);
+  static Pizza pizza9 = new Pizza("Pizza Pepperoni" , 9, 59);
+  static Pizza pizza10 = new Pizza("Pizza Quattro Stagioni", 10, 67);
+
 
 public String toString(){
   return " " + fullOrder;
@@ -39,8 +48,13 @@ public String toString(){
     pizzaList.add(pizza3);
     pizzaList.add(pizza4);
     pizzaList.add(pizza5);
+    pizzaList.add(pizza6);
+    pizzaList.add(pizza7);
+    pizzaList.add(pizza8);
+    pizzaList.add(pizza9);
+    pizzaList.add(pizza10);
 
-    System.out.println("\n" + pizzaList.toString());
+
 
   }
 
@@ -65,59 +79,15 @@ public String toString(){
         9 	Pizza Pepperoni: Tomat, ost, pepperoni og løg	59,-
         
         10 	Pizza Quattro Stagioni: Tomat, ost, kalkuntopping, champignon, løg og rejer	67,-
-        
-        11 	Pizza Calzone (Indbagt): Tomat, ost, kalkuntopping, champignon og rejer 64,-
-       
-        12 	Pizza Spaghetti (Indbagt): Tomat, ost, spaghetti og oksekød 59,-
-        
-        13 	Pizza Speciale: Tomat, ost, oksekød, kalkuntopping, champignon, løg, pepperoni og gorgonzola 69,-
-        
-        14 	Pizza Prins: Tomat, ost, oksemørbrad, kalve bacon, peberfrugt, oliven og gorgonzola	69,-
-        
-        15 	Pizza Super: Tomat, ost, oksemørbrad, champignon, løg, rejer og kalve bacon	69,-
-        
-        16 	Pizza Arlecchino: Tomat, ost, kalkuntopping, løg, kalve bacon, cocktailpølser og peberfrugt	69,-
-        
-        17 	Pizza Pescatore: Tomat, ost, rejer og ananas	59,-
-        
-        18 	Pizza Marinara: Tomat, ost, tun, rejer, hummer, muslinger og oliven	70,-
-     
-        19 	Pizza Vegetarian: Tomat, ost, champignon, løg, ananas, peberfrugt og oliven	60,-
-        
-        19A 	Kebab Pizza: Tomat, ost, kebab, med salat og dressing	59,-
-        
-        20 	Pizza Margherita: Tomat, ost	 	60,-
-        
-        21 	Pizza Miami: Tomat, ost, kalkuntopping og champignon	 	65,-
-        
-        22 	Pizza Texas: Tomat, ost, kylling, løg, kalve bacon og peberfrugt	 	69,-
-        
-        23 	Pizza Las Vegas: Tomat, ost, oksekød, løg og kalve bacon	 	67,-
-        
-        24 	Pizza Denver: Tomat, ost, oksekød, kalkuntopping, pepperoni og peberfrugt	 	69,-
-        
-        25 	Pizza Chicago: Tomat, ost, kebab, champignon, salat og dressing	 	69,-
-        
-        26 	Pizza Hawaii: Tomat, ost, kalkuntopping, champignon og kalve bacon	 	67,-
-        
-        27 	Pizza Mexico: Tomat, ost, pepperoni, champignon, løg og oliven	 	69,-
-        
-        28 	Pizza Vegetarian: Tomat, ost, champignon, løg, ananas og oliven	 	67,-
-        
-        29 	Pizza Florida: Tomat, ost, ananas og rejer	 	65,-
-        
-        30 	Pizza L.A.: Tomat, ost, kalkuntopping, rejer, hummer og ananas   65,-
                
         """;
 
     System.out.println(pizzaMenuCard);
   }
 
-  public static void chooseMenu(){}
-
   public static void seeOrderList(){
 
-    System.out.println("\n" + fullOrder.toString());
+    System.out.println("\nOrdre listen: \n" + fullOrder.toString());
 
   }
 
@@ -126,7 +96,7 @@ public String toString(){
   // start ordre
   // Giv nr til ordre
 
-  System.out.println("Ordre nr (Vælg mellem 1 - 5 for hvilket ordre nr)");
+  System.out.println("Ordre nr (Vælg mellem 1 - 8 for hvilket ordre nr)");
 
   orderNrInput = in.nextInt();
 
@@ -140,6 +110,12 @@ public String toString(){
     makeOrder4();
   } else if(orderNrInput == 5) {
     makeOrder5();
+  } else if(orderNrInput == 6) {
+    makeOrder6();
+  } else if(orderNrInput == 7) {
+    makeOrder7();
+  } else if(orderNrInput == 8) {
+    makeOrder8();
   }
 
 
@@ -153,7 +129,7 @@ public String toString(){
     yesOrNoInput = false;
     do {
 
-      System.out.println("Pizza input (Vælg mellem input 0 - 4)");
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
 
       orderPizzaInput = in.nextInt();
 
@@ -186,7 +162,7 @@ public String toString(){
 
     do {
 
-      System.out.println("Pizza input (Vælg mellem input 0 - 4)");
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
 
       orderPizzaInput = in.nextInt();
 
@@ -218,7 +194,7 @@ public String toString(){
     yesOrNoInput = false;
     do {
 
-      System.out.println("Pizza input (Vælg mellem input 0 - 4)");
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
 
       orderPizzaInput = in.nextInt();
 
@@ -250,7 +226,7 @@ public String toString(){
 
     do {
 
-      System.out.println("Pizza input (Vælg mellem input 0 - 4)");
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
 
       orderPizzaInput = in.nextInt();
 
@@ -282,7 +258,7 @@ public String toString(){
 
     do {
 
-      System.out.println("Pizza input (Vælg mellem input 0-4)");
+      System.out.println("Pizza input (Vælg mellem input 0-9)");
 
       orderPizzaInput = in.nextInt();
 
@@ -304,6 +280,101 @@ public String toString(){
     }while(yesOrNoInput == false);
 
     if (!fullOrder.contains(orderNr5)) {fullOrder.add(orderNr5);}
+
+  }
+  public static void makeOrder6(){
+
+
+    // tilføj item
+    yesOrNoInput = false;
+    do {
+
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+
+      orderPizzaInput = in.nextInt();
+
+      orderNr6.getOrderArrayList().add(pizzaList.get(orderPizzaInput));
+      System.out.println(orderNr6.toString());
+
+      // Ja / nej til flere items til ordre?
+
+      System.out.println("Vil du tilføje mere til ordren");
+      in.nextLine();
+
+      orderInput = in.nextLine();
+
+      if(orderInput.equalsIgnoreCase("yes")) {
+        yesOrNoInput = false;
+      } else if (orderInput.equalsIgnoreCase("nej")) {
+        yesOrNoInput = true;
+      }
+
+    }while(yesOrNoInput == false);
+
+    if (!fullOrder.contains(orderNr6)) {fullOrder.add(orderNr6);}
+
+  }
+  public static void makeOrder7(){
+
+    // tilføj item
+    yesOrNoInput = false;
+
+    do {
+
+      System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+
+      orderPizzaInput = in.nextInt();
+
+      orderNr7.getOrderArrayList().add(pizzaList.get(orderPizzaInput));
+      System.out.println(orderNr7.toString());
+
+      // Ja / nej til flere items til ordre?
+
+      System.out.println("Vil du tilføje mere til ordren");
+      in.nextLine();
+
+      orderInput = in.nextLine();
+
+      if(orderInput.equalsIgnoreCase("yes")) {
+        yesOrNoInput = false;
+      } else if (orderInput.equalsIgnoreCase("nej")) {
+        yesOrNoInput = true;
+      }
+
+    }while(yesOrNoInput == false);
+
+    if (!fullOrder.contains(orderNr7)) {fullOrder.add(orderNr7);}
+
+  }
+  public static void makeOrder8(){
+
+    // tilføj item
+    yesOrNoInput = false;
+
+    do {
+
+      System.out.println("Pizza input (Vælg mellem input 0-9)");
+
+      orderPizzaInput = in.nextInt();
+
+      orderNr8.getOrderArrayList().add(pizzaList.get(orderPizzaInput));
+      System.out.println(orderNr8.toString());
+      // Ja / nej til flere items til ordre?
+
+      System.out.println("Vil du tilføje mere til ordren");
+      in.nextLine();
+
+      orderInput = in.nextLine();
+
+      if(orderInput.equalsIgnoreCase("yes")) {
+        yesOrNoInput = false;
+      } else if (orderInput.equalsIgnoreCase("nej")) {
+        yesOrNoInput = true;
+      }
+
+    }while(yesOrNoInput == false);
+
+    if (!fullOrder.contains(orderNr8)) {fullOrder.add(orderNr8);}
 
   }
 
@@ -337,6 +408,18 @@ public String toString(){
 
       case "5":
         changeOrder5();
+        break;
+
+      case "6":
+        changeOrder6();
+        break;
+
+      case "7":
+        changeOrder7();
+        break;
+
+      case "8":
+        changeOrder8();
         break;
 
     }
@@ -376,6 +459,22 @@ public String toString(){
 
       case "6":
         orderNr1.getOrderArrayList().remove(5);
+        break;
+
+      case "7":
+        orderNr1.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr1.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr1.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr1.getOrderArrayList().remove(9);
         break;
 
     }
@@ -421,6 +520,21 @@ public String toString(){
         orderNr2.getOrderArrayList().remove(5);
         break;
 
+      case "7":
+        orderNr1.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr1.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr1.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr1.getOrderArrayList().remove(9);
+        break;
     }
 
     System.out.println(orderNr2);
@@ -461,6 +575,22 @@ public String toString(){
 
       case "6":
         orderNr3.getOrderArrayList().remove(5);
+        break;
+
+      case "7":
+        orderNr1.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr1.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr1.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr1.getOrderArrayList().remove(9);
         break;
 
     }
@@ -505,6 +635,21 @@ public String toString(){
         orderNr4.getOrderArrayList().remove(5);
         break;
 
+      case "7":
+        orderNr1.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr1.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr1.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr1.getOrderArrayList().remove(9);
+        break;
     }
 
     System.out.println(orderNr4);
@@ -547,9 +692,195 @@ public String toString(){
         orderNr5.getOrderArrayList().remove(5);
         break;
 
+      case "7":
+        orderNr1.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr1.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr1.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr1.getOrderArrayList().remove(9);
+        break;
     }
 
     System.out.println(orderNr5);
+
+  }
+  public static void changeOrder6(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr6);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr6.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr6.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr6.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr6.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr6.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr6.getOrderArrayList().remove(5);
+        break;
+
+      case "7":
+        orderNr6.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr6.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr6.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr6.getOrderArrayList().remove(9);
+        break;
+    }
+
+    System.out.println(orderNr6);
+
+  }
+  public static void changeOrder7(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr7);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr7.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr7.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr7.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr7.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr7.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr7.getOrderArrayList().remove(5);
+        break;
+
+      case "7":
+        orderNr7.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr7.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr7.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr7.getOrderArrayList().remove(9);
+        break;
+    }
+
+    System.out.println(orderNr7);
+
+  }
+  public static void changeOrder8(){
+
+    String changeItemInput;
+
+    System.out.println(orderNr8);
+
+    System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+
+    changeItemInput = in.nextLine();
+
+    switch (changeItemInput) {
+
+      case "1":
+        orderNr8.getOrderArrayList().remove(0);
+
+        break;
+
+      case "2":
+        orderNr8.getOrderArrayList().remove(1);
+        break;
+
+      case "3":
+        orderNr8.getOrderArrayList().remove(2);
+        break;
+
+      case "4":
+        orderNr8.getOrderArrayList().remove(3);
+        break;
+
+      case "5":
+        orderNr8.getOrderArrayList().remove(4);
+        break;
+
+      case "6":
+        orderNr8.getOrderArrayList().remove(5);
+        break;
+
+      case "7":
+        orderNr8.getOrderArrayList().remove(6);
+        break;
+
+      case "8":
+        orderNr8.getOrderArrayList().remove(7);
+        break;
+
+      case "9":
+        orderNr8.getOrderArrayList().remove(8);
+        break;
+
+      case "10":
+        orderNr8.getOrderArrayList().remove(9);
+        break;
+    }
+
+    System.out.println(orderNr8);
 
   }
 
@@ -589,6 +920,17 @@ public String toString(){
           orderNr5.getOrderArrayList().clear();
           break;
 
+        case "6":
+          orderNr6.getOrderArrayList().clear();
+          break;
+
+        case "7":
+          orderNr7.getOrderArrayList().clear();
+          break;
+
+        case "8":
+          orderNr8.getOrderArrayList().clear();
+          break;
       }
 
       System.out.println("Vil du fjerne en ordre til?");
@@ -643,13 +985,28 @@ public String toString(){
         fullOrder.remove(orderNr5);
         break;
 
+      case "6":
+        expOrder.add(orderNr6);
+        fullOrder.remove(orderNr6);
+        break;
+
+      case "7":
+        expOrder.add(orderNr7);
+        fullOrder.remove(orderNr7);
+        break;
+
+      case "8":
+        expOrder.add(orderNr8);
+        fullOrder.remove(orderNr8);
+        break;
+
     }
 
   }
 
   public static void seeExpList(){
 
-    System.out.println(expOrder);
+    System.out.println("\n ekspederet liste: \n" + expOrder);
 
   }
 
@@ -658,8 +1015,8 @@ public String toString(){
 
     System.out.println("Menukort");
 
+    pizzaMenuCard();
     pizzaList();
-
 
 
     String mainInput;
@@ -673,9 +1030,9 @@ public String toString(){
       System.out.println("""
           Input 1: Lav en ordre (eller tilføj item til eksisterende ordre).
           Input 2: Fjern item fra en ordre.
-          Input 3: Fjern ordre fra ordre liste.
+          Input 3: Fjern ordre.
           Input 4: Ordre fuldført.
-          Input 5: Se ekspideret ordre liste.
+          Input 5: Se ekspederet ordre liste.
           Input 6: Exit program.
           """);
 
