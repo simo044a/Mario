@@ -61,26 +61,30 @@ public String toString(){
 
   public static void pizzaMenuCard(){
     String pizzaMenuCard = """
-        1   Pizza Margherita: Tomat, ost	50,-
-        
-        2 	Pizza Vesuvio: Tomat, ost og kalkuntopping	55,-
-        
-        3 	Pizza Capricciosa: Tomat, ost, kalkuntopping og champignon	59,-
-        
-        4 	Pizza Hawaii: Tomat, ost, kalkuntopping, champignon og kalve bacon	64,-
-        
-        5 	Pizza Capone: Tomat, ost, oksekød, champignon og løg	64,-
-        
-        6 	Pizza Italiano: Tomat, ost, oksekød, løg og kalve bacon	64,-
-        
-        7 	Pizza Luciano: Tomat, ost, oksekød, peberfrugt og cocktailpølser	64,-
-        
-        8 	Pizza Europa: Tomat, ost, kylling, løg, kalve bacon og peberfrugt	67,-
-        
-        9 	Pizza Pepperoni: Tomat, ost, pepperoni og løg	59,-
-        
-        10 	Pizza Quattro Stagioni: Tomat, ost, kalkuntopping, champignon, løg og rejer	67,-
-               
+        #################################################################################################
+        ##                                                                                            
+        ##  1   Pizza Margherita: Tomat, ost	50,-                                                     
+        ##                                                                                             
+        ##  2 	Pizza Vesuvio: Tomat, ost og kalkuntopping	55,-                                       
+        ##                                                                                             
+        ##  3 	Pizza Capricciosa: Tomat, ost, kalkuntopping og champignon	59,-                       
+        ##                                                                                             
+        ##  4 	Pizza Hawaii: Tomat, ost, kalkuntopping, champignon og kalve bacon	64,-               
+        ##                                                                                             
+        ##  5 	Pizza Capone: Tomat, ost, oksekød, champignon og løg	64,-                            
+        ##                                                                                             
+        ##  6 	Pizza Italiano: Tomat, ost, oksekød, løg og kalve bacon	64,-                           
+        ##                                                                                               
+        ##  7 	Pizza Luciano: Tomat, ost, oksekød, peberfrugt og cocktailpølser	64,-                 
+        ##                                                                                             
+        ##  8 	Pizza Europa: Tomat, ost, kylling, løg, kalve bacon og peberfrugt	67,-                 
+        ##                                                                                             
+        ##  9 	Pizza Pepperoni: Tomat, ost, pepperoni og løg	59,-                                     
+        ##                                                                                             
+        ##  10 	Pizza Quattro Stagioni: Tomat, ost, kalkuntopping, champignon, løg og rejer	67,-       
+        ##                                                                                             
+        #################################################################################################   
+           
         """;
 
     System.out.println(pizzaMenuCard);
@@ -88,7 +92,7 @@ public String toString(){
 
   public static void seeOrderList(){
 
-    System.out.println("\nOrdre listen: \n" + fullOrder.toString());
+    System.out.println("\nOrdre listen: \n" + fullOrder.toString() + " \n");
 
   }
 
@@ -98,6 +102,7 @@ public String toString(){
   // Giv nr til ordre
 
   System.out.println("Ordre nr (Vælg mellem 1 - 8 for hvilket ordre nr)");
+    System.out.print("->  ");
 
   orderNrInput = in.nextInt();
 
@@ -131,6 +136,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -138,14 +144,16 @@ public String toString(){
       System.out.println(orderNr1.toString());
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren?");
+      System.out.println("Vil du tilføje mere til ordren?" +
+          " Yes Or No");
       in.nextLine();
+      System.out.print("->");
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -164,6 +172,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -172,14 +181,16 @@ public String toString(){
 
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -196,6 +207,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -204,14 +216,16 @@ public String toString(){
 
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -228,6 +242,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -236,14 +251,16 @@ public String toString(){
 
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -260,6 +277,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0-9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -267,14 +285,16 @@ public String toString(){
       System.out.println(orderNr5.toString());
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -291,6 +311,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -299,14 +320,16 @@ public String toString(){
 
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("No")) {
         yesOrNoInput = true;
       }
 
@@ -323,6 +346,7 @@ public String toString(){
     do {
 
       System.out.println("Pizza input (Vælg mellem input 0 - 9)");
+      System.out.print("->  ");
 
       orderPizzaInput = in.nextInt();
 
@@ -331,14 +355,16 @@ public String toString(){
 
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+      " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("No")) {
         yesOrNoInput = true;
       }
 
@@ -362,14 +388,16 @@ public String toString(){
       System.out.println(orderNr8.toString());
       // Ja / nej til flere items til ordre?
 
-      System.out.println("Vil du tilføje mere til ordren");
+      System.out.println("Vil du tilføje mere til ordren" +
+          " Yes Or No");
+      System.out.print("->  ");
       in.nextLine();
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -384,6 +412,7 @@ public String toString(){
     String changeOrderInput;
 
     System.out.println("Hvilken ordre vil du justere i?");
+    System.out.print("->  ");
 
     seeOrderList();
 
@@ -432,6 +461,7 @@ public String toString(){
     System.out.println(orderNr1);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -491,6 +521,7 @@ public String toString(){
     System.out.println(orderNr2);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -548,6 +579,7 @@ public String toString(){
     System.out.println(orderNr3);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -606,6 +638,7 @@ public String toString(){
     System.out.println(orderNr4);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -663,6 +696,7 @@ public String toString(){
     System.out.println(orderNr5);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -720,6 +754,7 @@ public String toString(){
     System.out.println(orderNr6);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -777,6 +812,7 @@ public String toString(){
     System.out.println(orderNr7);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -834,6 +870,7 @@ public String toString(){
     System.out.println(orderNr8);
 
     System.out.println("\nHvilket item vil du fjerne? (x -> y)");
+    System.out.print("->  ");
 
     changeItemInput = in.nextLine();
 
@@ -894,6 +931,7 @@ public String toString(){
     do {
 
       System.out.println("Hvilken ordre vil du fjerne?");
+      System.out.print("->  ");
 
       seeOrderList();
 
@@ -942,13 +980,15 @@ public String toString(){
           break;
       }
 
-      System.out.println("Vil du fjerne en ordre til?");
+      System.out.println("Vil du fjerne en ordre til?" +
+          "Yes Or No");
+      System.out.print("->  ");
 
       orderInput = in.nextLine();
 
       if(orderInput.equalsIgnoreCase("yes")) {
         yesOrNoInput = false;
-      } else if (orderInput.equalsIgnoreCase("nej")) {
+      } else if (orderInput.equalsIgnoreCase("no")) {
         yesOrNoInput = true;
       }
 
@@ -960,6 +1000,7 @@ public String toString(){
 
 
     System.out.println("Hvilken ordre er blevet betalt og afhentet?");
+    System.out.print("->  ");
 
     seeOrderList();
 
@@ -1037,13 +1078,19 @@ public String toString(){
 
       System.out.println("\nHvad vil du vælge i menuen? \n");
       System.out.println("""
-          Input 1: Lav en ordre (eller tilføj item til eksisterende ordre).
-          Input 2: Fjern item fra en ordre.
-          Input 3: Fjern ordre.
-          Input 4: Ordre fuldført.
-          Input 5: Se ekspederet ordre liste.
-          Input 6: Exit program.
+          ############################################################################
+          ##                                                                        ##
+          ##    Input 1: Lav en ordre (eller tilføj item til eksisterende ordre).   ##
+          ##    Input 2: Fjern item fra en ordre.                                   ##
+          ##    Input 3: Fjern ordre.                                               ##
+          ##    Input 4: Ordre fuldført.                                            ##
+          ##    Input 5: Se ekspederet ordre liste.                                 ##
+          ##    Input 6: Exit program.                                              ##
+          ##                                                                        ##
+          ############################################################################
           """);
+
+      System.out.print("->  ");
 
       mainInput = in.nextLine();
 
